@@ -20,7 +20,9 @@ print(colored("| 6.bettercap  |", 'green', 'on_grey'))
 print(colored("|--------------|", 'green', 'on_grey'))
 print(colored("| 7.mitmproxy  |", 'green', 'on_grey'))
 print(colored("|--------------|", 'green', 'on_grey'))
-print(colored("| 8.exit       |", 'green', 'on_grey'))
+print(colored("| 8.evil-ssdp  |", 'green', 'on_grey'))
+print(colored("|--------------|", 'green', 'on_grey'))
+print(colored("| 9.exit       |", 'green', 'on_grey'))
 print(colored("|##############|", 'green', 'on_grey'))
 print(colored("Select your tool:", 'red', 'on_grey'))
 a = int(input())
@@ -95,4 +97,7 @@ elif a == 7:
     os.system("mitmproxy" + o)
     os.system("python3 /data/data/com.termux/files/chroot/terminal.py")
 elif a == 8:
+    os.system("python3 /data/data/com.termux/files/home/evil-ssdp/evil-ssdp.py")
+    os.system("python3 /data/data/com.termux/files/chroot/terminal.py")
+elif a == 9:
     os.system("clear && python3 /data/data/com.termux/files/chroot/chroot.py")
