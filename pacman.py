@@ -6,7 +6,7 @@ from termcolor import colored
 
 os.system("clear")
 print(colored("Hello! This is STALIN OS term-edition Package Manager!", 'cyan', 'on_grey'))
-print(colored("version 3.2 by Dima-diep", 'cyan', 'on_grey'))
+print(colored("version 3.3 by Dima-diep", 'cyan', 'on_grey'))
 print(colored("WARNING! Package Manager isn't working with root", 'yellow', 'on_grey'))
 print(colored("| === === === === === === === ===  |", 'grey', 'on_blue'))
 print(colored("| 1.Games                          |", 'grey', 'on_blue'))
@@ -170,6 +170,8 @@ elif a == 2:
     print(colored("| 9.arp-scan                              |", 'grey', 'on_blue'))
     print(colored("|-----------------------------------------|", 'grey', 'on_blue'))
     print(colored("| 10.mitmproxy                            |", 'grey', 'on_blue'))
+    print(colored("|-----------------------------------------|", 'grey', 'on_blue'))
+    print(colored("| 11.evil-ssdp                            |", 'grey', 'on_blue'))
     print(colored("| === === === === === === === === === === |", 'grey', 'on_blue'))
     print(colored("Select your repo:", 'red', 'on_grey'))
     c = int(input())
@@ -194,6 +196,8 @@ elif a == 2:
         os.system("clear && apt install root-repo -y && apt install arp-scan -y")
     elif c == 10:
         os.system("clear && python3 -m pip install mitmproxy")
+    elif c == 11:
+        os.system("clear && git clone https://github.com/initstring/evil-ssdp")
     os.system("clear && python3 /data/data/com.termux/files/chroot/pacman.py")
 elif a == 3:
     os.system("clear")
