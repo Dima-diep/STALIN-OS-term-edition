@@ -26,6 +26,7 @@
 * 2.7.1
 * 2.7.2
 * 2.8.0
+* 2.8.1
 
 ## Versions
 
@@ -140,6 +141,9 @@
 
 ### 2.8.0
 * Rewrited installer and reinstaller
+
+### 2.8.1
+* Added evil-ssdp
 
 ## Functions:
 
