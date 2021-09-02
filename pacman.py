@@ -31,54 +31,41 @@ a = int(input())
 
 if a == 1:
     os.system("clear")
-    print(colored("| === === === === === === === === ===  |", 'grey', 'on_blue'))
-    print(colored("| 1.0verkill       | 24.nudoku         |", 'grey', 'on_blue'))
-    print(colored("|--------------------------------------|", 'grey', 'on_blue'))
-    print(colored("| 2.angband        | 25.open-adventure |", 'grey', 'on_blue'))
-    print(colored("|--------------------------------------|", 'grey', 'on_blue'))
-    print(colored("| 3.bastet         | 26.pacman         |", 'grey', 'on_blue'))
-    print(colored("|--------------------------------------|", 'grey', 'on_blue'))
-    print(colored("| 4.brogue         | 27.snake          |", 'grey', 'on_blue'))
-    print(colored("|--------------------------------------|", 'grey', 'on_blue'))
-    print(colored("| 5.cavez-of-phear | 28.solitaire      |", 'grey', 'on_blue'))
-    print(colored("|--------------------------------------|", 'grey', 'on_blue'))
-    print(colored("| 6.cboard         | 29.viletris       |", 'grey', 'on_blue'))
-    print(colored("|--------------------------------------|", 'grey', 'on_blue'))
-    print(colored("| 7.curse-of-war   |###################|", 'grey', 'on_blue'))
-    print(colored("|------------------|###################|", 'grey', 'on_blue'))
-    print(colored("| 8.dmagnetic      |###################|", 'grey', 'on_blue'))
-    print(colored("|------------------|###################|", 'grey', 'on_blue'))
-    print(colored("| 9.dopewars       |###################|", 'grey', 'on_blue'))
-    print(colored("|------------------|###################|", 'grey', 'on_blue'))
-    print(colored("| 10.frotz         |###################|", 'grey', 'on_blue'))
-    print(colored("|------------------|###################|", 'grey', 'on_blue'))
-    print(colored("| 11.glulxe        |###################|", 'grey', 'on_blue'))
-    print(colored("|------------------|###################|", 'grey', 'on_blue'))
-    print(colored("| 12.gnuchess      |###################|", 'grey', 'on_blue'))
-    print(colored("|------------------|###################|", 'grey', 'on_blue'))
-    print(colored("| 13.gnugo         |###################|", 'grey', 'on_blue'))
-    print(colored("|------------------|###################|", 'grey', 'on_blue'))
-    print(colored("| 14.gnushogi      |###################|", 'grey', 'on_blue'))
-    print(colored("|------------------|###################|", 'grey', 'on_blue'))
-    print(colored("| 15.gnuski        |###################|", 'grey', 'on_blue'))
-    print(colored("|------------------|###################|", 'grey', 'on_blue'))
-    print(colored("| 16.greed         |###################|", 'grey', 'on_blue'))
-    print(colored("|------------------|###################|", 'grey', 'on_blue'))
-    print(colored("| 17.lexter        |###################|", 'grey', 'on_blue'))
-    print(colored("|------------------|###################|", 'grey', 'on_blue'))
-    print(colored("| 18.moon-buggy    |###################|", 'grey', 'on_blue'))
-    print(colored("|------------------|###################|", 'grey', 'on_blue'))
-    print(colored("| 19.moria         |###################|", 'grey', 'on_blue'))
-    print(colored("|------------------|###################|", 'grey', 'on_blue'))
-    print(colored("| 20.myman         |###################|", 'grey', 'on_blue'))
-    print(colored("|------------------|###################|", 'grey', 'on_blue'))
-    print(colored("| 21.nethack       |###################|", 'grey', 'on_blue'))
-    print(colored("|------------------|###################|", 'grey', 'on_blue'))
-    print(colored("| 22.ninvaders     |###################|", 'grey', 'on_blue'))
-    print(colored("|------------------|###################|", 'grey', 'on_blue'))
-    print(colored("| 23.nsnake        |###################|", 'grey', 'on_blue'))
-    print(colored("| === === === === ===  === === === === |", 'grey', 'on_blue'))
-    print(colored("Select your game:", 'red', 'on_grey'))
+    x.field_names = ["N", "Game"]
+    x.add_rows(
+        [
+            [1, "0verkill"],
+            [2. "angband"],
+            [3, "bastet"],
+            [4, "brogue"],
+            [5, "cavez-of-phear"],
+            [6, "cboard"],
+            [7, "curse-of-war"],
+            [8, "dmagnetic"],
+            [9, "dopewars"],
+            [10, "frotz"],
+            [11, "glulxe"],
+            [12, "gnuchess"],
+            [13, "gnugo"],
+            [14, "gnushogi"],
+            [15, "gnuski"],
+            [16, "greed"],
+            [17, "lexter"],
+            [18, "moon-buggy"],
+            [19, "moria"],
+            [20, "myman"],
+            [21, "nethack"],
+            [22, "ninvaders"],
+            [23, "nsnake"],
+            [24, "nudoku"],
+            [25, "open-adventure"],
+            [26, "pacman"],
+            [27, "snake"],
+            [28, "solitaire"],
+            [29, "viletris"],
+        ]
+    )
+    print("Select your game:")
     b = int(input())
 
     if b == 1:
@@ -143,30 +130,24 @@ if a == 1:
 
 elif a == 2:
     os.system("clear")
-    print(colored("| === === === === === === === === === === |", 'grey', 'on_blue'))
-    print(colored("| 1.nmap+netcat                           |", 'grey', 'on_blue'))
-    print(colored("|-----------------------------------------|", 'grey', 'on_blue'))
-    print(colored("| 2.metasploit                            |", 'grey', 'on_blue'))
-    print(colored("|-----------------------------------------|", 'grey', 'on_blue'))
-    print(colored("| 3.apache                                |", 'grey', 'on_blue'))
-    print(colored("|-----------------------------------------|", 'grey', 'on_blue'))
-    print(colored("| 4.sqlite3 (for reading databases)       |", 'grey', 'on_blue'))
-    print(colored("|-----------------------------------------|", 'grey', 'on_blue'))
-    print(colored("| 5.postgresql (also need for metasploit) |", 'grey', 'on_blue'))
-    print(colored("|-----------------------------------------|", 'grey', 'on_blue'))
-    print(colored("| 6.bettercap                             |", 'grey', 'on_blue'))
-    print(colored("|-----------------------------------------|", 'grey', 'on_blue'))
-    print(colored("| 7.dirb                                  |", 'grey', 'on_blue'))
-    print(colored("|-----------------------------------------|", 'grey', 'on_blue'))
-    print(colored("| 8.aircrack-ng                           |", 'grey', 'on_blue'))
-    print(colored("|-----------------------------------------|", 'grey', 'on_blue'))
-    print(colored("| 9.arp-scan                              |", 'grey', 'on_blue'))
-    print(colored("|-----------------------------------------|", 'grey', 'on_blue'))
-    print(colored("| 10.mitmproxy                            |", 'grey', 'on_blue'))
-    print(colored("|-----------------------------------------|", 'grey', 'on_blue'))
-    print(colored("| 11.evil-ssdp                            |", 'grey', 'on_blue'))
-    print(colored("| === === === === === === === === === === |", 'grey', 'on_blue'))
-    print(colored("Select your repo:", 'red', 'on_grey'))
+    x.field_names = ["N", "Tools"]
+    x.add_rows(
+        [
+            [1, "nmap+netcat"],
+            [2, "metasploit"],
+            [3, "apache"],
+            [4, "sqlite3 (for reading databases)"],
+            [5, "postgresql (need for metasploit)"],
+            [6, "bettercap"],
+            [7, "dirb"],
+            [8, "aircrack-ng"]
+            [9, "arp-scan"],
+            [10, "mitmproxy"],
+            [11, "evil-ssdp"],
+            [12, "WiFite"],
+        ]
+    )
+    print("Select your repo:")
     c = int(input())
 
     if c == 1:
@@ -191,13 +172,15 @@ elif a == 2:
         os.system("clear && python3 -m pip install mitmproxy")
     elif c == 11:
         os.system("clear && git clone https://github.com/initstring/evil-ssdp")
+    elif c == 12:
+        os.system("clear && git clone https://github.com/derv82/wifite.git")
     os.system("clear && python3 /data/data/com.termux/files/chroot/pacman.py")
 elif a == 3:
     os.system("clear")
     print(colored("| ===  === ===  === |", 'grey', 'on_blue'))
-    print(colored("| 1.ruby2      |", 'grey', 'on_blue'))
+    print(colored("| 1.ruby2           |", 'grey', 'on_blue'))
     print(colored("|-------------------|", 'grey', 'on_blue'))
-    print(colored("| 2.python 2.7 |", 'grey', 'on_blue'))
+    print(colored("| 2.python 2.7      |", 'grey', 'on_blue'))
     print(colored("|-------------------|", 'grey', 'on_blue'))
     print(colored("| 3.rust            |", 'grey', 'on_blue'))
     print(colored("|-------------------|", 'grey', 'on_blue'))
