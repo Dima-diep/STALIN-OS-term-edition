@@ -24,9 +24,7 @@ a = int(input())
 
 if a == 1:
     os.system("clear")
-    os.system("bash /data/data/com.termux/files/boot/boot.sh")
-    os.system("clear")
-    os.system("python3 /data/data/com.termux/files/chroot/chroot.py")
+    os.system("python3 /data/data/com.termux/files/boot/boot.py")
 
 elif a == 2:
     os.system("clear")
