@@ -20,7 +20,7 @@ apt upgrade -y &>/dev/null
 ECHO
 echo "(#------------------------)"
 echo "6%"
-apt install python termux-api mpv htop-legacy tor libc++ tar wget calc openssh mc man proot proot-distro -y &>/dev/null
+apt install python termux-api mpv htop-legacy tor libc++ wget calc openssh mc man proot proot-distro -y &>/dev/null
 ECHO
 echo "(##-----------------------)"
 echo "8%"
