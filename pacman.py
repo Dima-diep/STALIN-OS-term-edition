@@ -35,7 +35,7 @@ if a == 1:
     x.add_rows(
         [
             [1, "0verkill"],
-            [2. "angband"],
+            [2, "angband"],
             [3, "bastet"],
             [4, "brogue"],
             [5, "cavez-of-phear"],
