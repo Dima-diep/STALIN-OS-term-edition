@@ -1,7 +1,7 @@
 #!/bin/bash
 ECHO() {
 clear;
-echo "STALIN-OS term edition v2.8.0 installer";
+echo "STALIN-OS term edition v2.8.1 installer";
 echo "Installing system...";
 }
 termux-setup-storage
@@ -28,7 +28,7 @@ python3 -m pip install --upgrade pip >/dev/null
 ECHO
 echo "(##-----------------------)"
 echo "10%"
-python3 -m pip install termcolor requests tqdm PTable urllib3 charset-normalizer certifi idna colorama >/dev/null
+python3 -m pip install termcolor requests tqdm PTable urllib3 charset-normalizer certifi idna colorama prettytable wcwidth >/dev/null
 ECHO
 echo "(###----------------------)"
 echo "12%"
