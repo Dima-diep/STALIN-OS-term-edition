@@ -144,7 +144,7 @@
 
 ### 2.8.1
 * Added evil-ssdp
-* Removed bootanimation
+* Remaked bootanimation
 
 ## Functions:
 
