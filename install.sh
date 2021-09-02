@@ -142,34 +142,29 @@ mv atilo ../../usr/bin
 ECHO
 echo "(#################--------)"
 echo "70%"
-cd ../../boot/bootanimation
-tar -xvzf boot.tar.gz &>/dev/null
-ECHO
-echo "(##################-------)"
-echo "72%"
 chmod 777 *
 ECHO
 echo "(##################-------)"
-echo "74%"
+echo "72%"
 echo "#!/bin/bash" > ../../usr/bin/login
 echo "python3 /data/data/com.termux/files/boot/grub.py" >> ../../usr/bin/login
 ECHO
-echo "(###################------)"
-echo "76%"
+echo "(##################-------)"
+echo "74%"
 cd ../../chroot
 touch contacts.txt
 ECHO
 echo "(###################------)"
-echo "78%"
+echo "76%"
 cd ../system
 touch .killhist.sh
 ECHO
-echo "(####################-----)"
-echo "80%"
+echo "(###################------)"
+echo "78%"
 chmod 777 .killhist.sh
 ECHO
 echo "(####################-----)"
-echo "82%"
+echo "80%"
 echo "#!/bin/bash" > .killhist.sh
 echo "rm -rf ~/.bash_history" >> .killhist.sh
 echo "rm -rf ~/.zsh_history" >> .killhist.sh
@@ -177,34 +172,30 @@ echo "rm -rf ~/.wget_hsts" >> .killhist.sh
 echo "rm -rf ~/.python_history" >> .killhist.sh
 echo "rm -rf ~/.sqlite_history" >> .killhist.sh
 ECHO
-echo "(#####################----)"
-echo "84%"
+echo "(####################-----)"
+echo "82%"
 cd ../home
 touch .bashrc
 ECHO
 echo "(#####################----)"
-echo "86%"
+echo "84%"
 git clone https://github.com/Dima-diep/Linux-Installer-Termux &>/dev/null
 ECHO
 echo "(######################---)"
-echo "88%"
+echo "89%"
 git clone https://github.com/Dima-diep/Music-Termux &>/dev/null
-ECHO
-echo "(######################---)"
-echo "90%"
-chmod 777 Music-Termux/*
-ECHO
-echo "(#######################--)"
-echo "92%"
-chmod 777 Linux-Installer-Termux/*
 ECHO
 echo "(#######################--)"
 echo "94%"
-chsh -s bash
+chmod 777 Music-Termux/*
 ECHO
 echo "(########################-)"
 echo "96%"
-sleep 1
+chmod 777 Linux-Installer-Termux/*
+ECHO
+echo "(########################-)"
+echo "98%"
+chsh -s bash
 ECHO
 echo "(#########################)"
 echo "100%"
