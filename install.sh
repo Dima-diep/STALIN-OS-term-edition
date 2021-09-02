@@ -69,52 +69,47 @@ mkdir .initialize
 ECHO
 echo "(#######------------------)"
 echo "30%"
-cd boot
-mkdir bootanimation
-ECHO
-echo "(########-----------------)"
-echo "32%"
 cd ../home/STALIN-OS-term-edition
 mv grub.py ../../boot
 ECHO
 echo "(########-----------------)"
-echo "34%"
+echo "32%"
 mv *.mp3 ../../boot
 ECHO
-echo "(#########----------------)"
-echo "36%"
+echo "(########-----------------)"
+echo "34%"
 mv login.py ../../boot
 ECHO
 echo "(#########----------------)"
-echo "38%"
+echo "36%"
 mv pass.py ../../boot
 ECHO
-echo "(##########---------------)"
-echo "40%"
+echo "(#########----------------)"
+echo "38%"
 mv chlogin.py ../../chroot
 ECHO
 echo "(##########---------------)"
-echo "42%"
+echo "40%"
 mv chpass.py ../../chroot
 ECHO
-echo "(###########--------------)"
-echo "44%"
+echo "(##########---------------)"
+echo "42%"
 mv chroot.py ../../chroot
 ECHO
 echo "(###########--------------)"
-echo "46%"
+echo "44%"
 mv pacman.py ../../chroot
 ECHO
-echo "(############-------------)"
-echo "48%"
+echo "(###########--------------)"
+echo "46%"
 mv setting.py ../../system
 ECHO
 echo "(############-------------)"
-echo "50%"
+echo "48%"
 mv terminal.py ../../chroot
 ECHO
-echo "(#############------------)"
-echo "52%"
+echo "(############-------------)"
+echo "50%"
 mv initialize.* ../../.initialize
 ECHO
 echo "(#############------------)"
@@ -125,13 +120,9 @@ echo "(##############-----------)"
 echo "56%"
 mv uninstall.* ../../system
 ECHO
-echo "(##############-----------)"
-echo "58%"
-mv boot.tar.gz ../../boot/bootanimation
-ECHO
 echo "(###############----------)"
 echo "60%"
-mv boot.py ../../boot
+mv boot.sh ../../boot
 ECHO
 echo "(###############----------)"
 echo "62%"
