@@ -122,7 +122,7 @@ mv uninstall.* ../../system
 ECHO
 echo "(###############----------)"
 echo "60%"
-mv boot.sh ../../boot
+mv boot.py ../../boot
 ECHO
 echo "(###############----------)"
 echo "62%"
