@@ -2,7 +2,7 @@
 #! -*- coding: utf-8 -*-
 import os
 import time
-import prettytable
+from prettytable import PrettyTable
 from termcolor import colored
 
 os.system("clear")
@@ -27,11 +27,13 @@ x.add_rows(
         [12, "exit"],
     ]
 )
+print(x)
 print("Select your type:")
 a = int(input())
 
 if a == 1:
     os.system("clear")
+    x = PrettyTable()
     x.field_names = ["N", "Game"]
     x.add_rows(
         [
@@ -66,6 +68,7 @@ if a == 1:
             [29, "viletris"],
         ]
     )
+    print(x)
     print("Select your game:")
     b = int(input())
 
@@ -131,6 +134,7 @@ if a == 1:
 
 elif a == 2:
     os.system("clear")
+    x = PrettyTable()
     x.field_names = ["N", "Tools"]
     x.add_rows(
         [
@@ -148,6 +152,7 @@ elif a == 2:
             [12, "WiFite"],
         ]
     )
+    print(x)
     print("Select your repo:")
     c = int(input())
 
