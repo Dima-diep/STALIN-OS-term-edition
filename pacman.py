@@ -140,7 +140,7 @@ elif a == 2:
             [5, "postgresql (need for metasploit)"],
             [6, "bettercap"],
             [7, "dirb"],
-            [8, "aircrack-ng"]
+            [8, "aircrack-ng"],
             [9, "arp-scan"],
             [10, "mitmproxy"],
             [11, "evil-ssdp"],
