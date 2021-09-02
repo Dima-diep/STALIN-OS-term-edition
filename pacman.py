@@ -9,6 +9,7 @@ os.system("clear")
 print("Hello! This is STALIN OS term-edition Package Manager!")
 print("version 4.3 by Dima-diep")
 print("WARNING! Package Manager isn't working with root")
+x = PrettyTable()
 x.field_names = ["N", "Name"]
 x.add_rows(
     [
