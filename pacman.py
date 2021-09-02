@@ -2,38 +2,31 @@
 #! -*- coding: utf-8 -*-
 import os
 import time
+import prettytable
 from termcolor import colored
 
 os.system("clear")
-print(colored("Hello! This is STALIN OS term-edition Package Manager!", 'cyan', 'on_grey'))
-print(colored("version 3.3 by Dima-diep", 'cyan', 'on_grey'))
-print(colored("WARNING! Package Manager isn't working with root", 'yellow', 'on_grey'))
-print(colored("| === === === === === === === ===  |", 'grey', 'on_blue'))
-print(colored("| 1.Games                          |", 'grey', 'on_blue'))
-print(colored("|----------------------------------|", 'grey', 'on_blue'))
-print(colored("| 2.Network Tools                  |", 'grey', 'on_blue'))
-print(colored("|----------------------------------|", 'grey', 'on_blue'))
-print(colored("| 3.Compilers                      |", 'grey', 'on_blue'))
-print(colored("|----------------------------------|", 'grey', 'on_blue'))
-print(colored("| 4.text editors                   |", 'grey', 'on_blue'))
-print(colored("|----------------------------------|", 'grey', 'on_blue'))
-print(colored("| 5.SMS-Bombers                    |", 'grey', 'on_blue'))
-print(colored("|----------------------------------|", 'grey', 'on_blue'))
-print(colored("| 6.Other Tools                    |", 'grey', 'on_blue'))
-print(colored("|----------------------------------|", 'grey', 'on_blue'))
-print(colored("| 7.Install python2 library        |", 'grey', 'on_blue'))
-print(colored("|----------------------------------|", 'grey', 'on_blue'))
-print(colored("| 8.Install python3 library        |", 'grey', 'on_blue'))
-print(colored("|----------------------------------|", 'grey', 'on_blue'))
-print(colored("| 9.Install ruby library           |", 'grey', 'on_blue'))
-print(colored("|----------------------------------|", 'grey', 'on_blue'))
-print(colored("| 10.Install node-js (npm) library |", 'grey', 'on_blue'))
-print(colored("|----------------------------------|", 'grey', 'on_blue'))
-print(colored("| 11.Help with command             |", 'grey', 'on_blue'))
-print(colored("|----------------------------------|", 'grey', 'on_blue'))
-print(colored("| 12.exit                          |", 'grey', 'on_blue'))
-print(colored("|  === === === === === === === === |", 'grey', 'on_blue'))
-print(colored("Select your type:", 'cyan', 'on_grey'))
+print("Hello! This is STALIN OS term-edition Package Manager!")
+print("version 4.3 by Dima-diep")
+print("WARNING! Package Manager isn't working with root")
+x.field_names = ["N", "Name"]
+x.add_rows(
+    [
+        [1, "Games"],
+        [2, "Network Tools"],
+        [3, "Compilers"],
+        [4, "text editors"],
+        [5, "SMS-Bombers"],
+        [6, "Other Tools"],
+        [7, "Install python2 library"],
+        [8, "Install python3 library"],
+        [9, "Install ruby library"],
+        [10, "Install node-js (npm) library"],
+        [11, "Help with command"],
+        [12, "exit"],
+    ]
+)
+print("Select your type:")
 a = int(input())
 
 if a == 1:
