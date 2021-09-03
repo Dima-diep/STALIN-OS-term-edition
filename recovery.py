@@ -1,23 +1,23 @@
 #!/usr/bin/env python3
 #! -*- coding: utf-8 -*-
 import os
-from termcolor import colored
+from prettytable import PrettyTable
 
-print(colored("WARNING! YOU STARTED RECOVERY MODE! BE CAREFUL BECAUSE YOU CAN DESTROY SYSTEM!", 'yellow', 'on_grey'))
-print(colored("RED SCRIPTS CAN WORK ONLY AT ROOTED DEVICES!", 'red', 'on_grey'))
+print("WARNING! YOU STARTED RECOVERY MODE! BE CAREFUL BECAUSE YOU CAN DESTROY SYSTEM!!!")
 print(" ")
 print(" ")
-print(colored("|####################################################|", 'cyan', 'on_grey'))
-print(colored("| 1.Shutdown mobile                                  |", 'red', 'on_grey'))
-print(colored("|----------------------------------------------------|", 'cyan', 'on_grey'))
-print(colored("| 2.bootloop mobile (it isn't destroy mobile bootfs, |", 'red', 'on_grey'))
-print(colored("| just calling bootloop)                             |", 'red', 'on_grey'))
-print(colored("|----------------------------------------------------|", 'cyan', 'on_grey'))
-print(colored("| 3.Run my bash script                               |", 'green', 'on_grey'))
-print(colored("|----------------------------------------------------|", 'cyan', 'on_grey'))
-print(colored("| 4.Back to GRUB                                     |", 'green', 'on_grey'))
-print(colored("|####################################################|", 'cyan', 'on_grey'))
-print(colored("Select:", 'cyan', 'on_grey'))
+x = PrettyTable()
+x.field_names = ["N", "Function", "Root need?"]
+x.add_rows(
+    [
+        [1, "Shutdown mobile", "Yes"],
+        [2, "bootloop mobile (it isn't destroy mobile bootfs,\n just calling bootloop", "Yes"],
+        [3, "Run my bash script", "No"],
+        [4, "Back to GRUB", "No"],
+    ]
+)
+print(x)
+print("Select:")
 l = int(input())
 
 if l == 1:
