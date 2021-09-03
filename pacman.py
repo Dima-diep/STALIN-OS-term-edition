@@ -183,28 +183,26 @@ elif a == 2:
     os.system("clear && python3 /data/data/com.termux/files/chroot/pacman.py")
 elif a == 3:
     os.system("clear")
-    print(colored("| ===  === ===  === |", 'grey', 'on_blue'))
-    print(colored("| 1.ruby2           |", 'grey', 'on_blue'))
-    print(colored("|-------------------|", 'grey', 'on_blue'))
-    print(colored("| 2.python 2.7      |", 'grey', 'on_blue'))
-    print(colored("|-------------------|", 'grey', 'on_blue'))
-    print(colored("| 3.rust            |", 'grey', 'on_blue'))
-    print(colored("|-------------------|", 'grey', 'on_blue'))
-    print(colored("| 4.swift           |", 'grey', 'on_blue'))
-    print(colored("|-------------------|", 'grey', 'on_blue'))
-    print(colored("| 5.c/c++           |", 'grey', 'on_blue'))
-    print(colored("|-------------------|", 'grey', 'on_blue'))
-    print(colored("| 6.golang          |", 'grey', 'on_blue'))
-    print(colored("|-------------------|", 'grey', 'on_blue'))
-    print(colored("| 7.php             |", 'grey', 'on_blue'))
-    print(colored("|-------------------|", 'grey', 'on_blue'))
-    print(colored("| 8.java            |", 'grey', 'on_blue'))
-    print(colored("|-------------------|", 'grey', 'on_blue'))
-    print(colored("| 9.javascript      |", 'grey', 'on_blue'))
-    print(colored("|-------------------|", 'grey', 'on_blue'))
-    print(colored("| 10.javascript-lts |", 'grey', 'on_blue'))
-    print(colored("| ===  ===  === === |", 'grey', 'on_blue'))
-    print(colored("Select your compiler:", 'yellow', 'on_grey'))
+    x = PrettyTable()
+    x.field_names = ["N", "Tools"]
+    x.add_rows(
+        [
+            [1, "ruby2"],
+            [2, "python 2.7"],
+            [3, "rust"],
+            [4, "swift"],
+            [5, "c/c++"],
+            [6, "golang"],
+            [7, "php"],
+            [8, "java"],
+            [9, "javascript"],
+            [10, "javascript-lts"],
+            [11, "kotlin"],
+            [12, "julia"],
+        ]
+    )
+    print(x)
+    print("Select your compiler:")
     d = int(input())
 
     if d == 1:
@@ -227,25 +225,28 @@ elif a == 3:
         os.system("clear && apt install nodejs -y")
     elif d == 10:
         os.system("clear && apt install nodejs-lts -y")
+    elif d == 11:
+        os.system("clear && apt install kotlin -y")
+    elif d == 12:
+        os.system("clear && apt install julia -y")
     os.system("python3 /data/data/com.termux/files/chroot/pacman.py")
 elif a == 4:
     os.system("clear")
-    print(colored("| ===  === |", 'grey', 'on_blue'))
-    print(colored("| 1.nano   |", 'grey', 'on_blue'))
-    print(colored("|----------|", 'grey', 'on_blue'))
-    print(colored("| 2.vim    |", 'grey', 'on_blue'))
-    print(colored("|----------|", 'grey', 'on_blue'))
-    print(colored("| 3.neovim |", 'grey', 'on_blue'))
-    print(colored("|----------|", 'grey', 'on_blue'))
-    print(colored("| 4.joe    |", 'grey', 'on_blue'))
-    print(colored("|----------|", 'grey', 'on_blue'))
-    print(colored("| 5.emacs  |", 'grey', 'on_blue'))
-    print(colored("|----------|", 'grey', 'on_blue'))
-    print(colored("| 6.micro  |", 'grey', 'on_blue'))
-    print(colored("|----------|", 'grey', 'on_blue'))
-    print(colored("| 7.mcedit |", 'grey', 'on_blue'))
-    print(colored("| ===  === |", 'grey', 'on_blue'))
-    print(colored("Select your editor:", 'green', 'on_grey'))
+    x = PrettyTable()
+    x.field_names = ["N", "Editor"]
+    x.add_rows(
+        [
+            [1, "nano"],
+            [2, "vim"],
+            [3, "neovim"],
+            [4, "joe"],
+            [5, "emacs"],
+            [6, "micro"],
+            [7, "mcedit"],
+        ]
+    )
+    print(x)
+    print("Select your editor:")
     e = int(input())
 
     if e == 1:
@@ -265,16 +266,18 @@ elif a == 4:
     os.system("python3 /data/data/com.termux/files/chroot/pacman.py")
 elif a == 5:
     os.system("clear")
-    print(colored("|  === ===  ===  === === |", 'grey', 'on_blue'))
-    print(colored("| 1.T-Bomb               |", 'grey', 'on_blue'))
-    print(colored("|------------------------|", 'grey', 'on_blue'))
-    print(colored("| 2.SMSBomber300         |", 'grey', 'on_blue'))
-    print(colored("|------------------------|", 'grey', 'on_blue'))
-    print(colored("| 3.Egyptian-SMS-Spammer |", 'grey', 'on_blue'))
-    print(colored("|------------------------|", 'grey', 'on_blue'))
-    print(colored("| 4.spymer               |", 'grey', 'on_blue'))
-    print(colored("| === ===  ===  === ===  |", 'grey', 'on_blue'))
-    print(colored("Select your bomber:", 'red', 'on_blue'))
+    x = PrettyTable()
+    x.field_names = ["N", "SMS-Bombers"]
+    x.add_rows(
+        [
+            [1, "T-Bomb"],
+            [2, "SMSBomber300"],
+            [3, "Egyptian-SMS-Spammer"],
+            [4, "spymer"],
+        ]
+    )
+    print(x)
+    print("Select your bomber:")
     f = int(input())
 
     if f == 1:
@@ -289,22 +292,21 @@ elif a == 5:
 
 elif a == 6:
     os.system("clear")
-    print(colored("| === === === === === === |", 'grey', 'on_blue'))
-    print(colored("| 1.Telegram Number Check |", 'grey', 'on_blue'))
-    print(colored("|-------------------------|", 'grey', 'on_blue'))
-    print(colored("| 2.system upgrade        |", 'grey', 'on_blue'))
-    print(colored("|-------------------------|", 'grey', 'on_blue'))
-    print(colored("| 3.Install your package  |", 'grey', 'on_blue'))
-    print(colored("|-------------------------|", 'grey', 'on_blue'))
-    print(colored("| 4.Clone your repository |", 'grey', 'on_blue'))
-    print(colored("|-------------------------|", 'grey', 'on_blue'))
-    print(colored("| 5.Create your package   |", 'grey', 'on_blue'))
-    print(colored("|-------------------------|", 'grey', 'on_blue'))
-    print(colored("| 6.Remove your packages  |", 'grey', 'on_blue'))
-    print(colored("|-------------------------|", 'grey', 'on_blue'))
-    print(colored("| 7.List packages         |", 'grey', 'on_blue'))
-    print(colored("| === === === === === === |", 'grey', 'on_blue'))
-    print(colored("Select your function:", 'green', 'on_grey'))
+    x = PrettyTable()
+    x.field_names = ["N", "Tools"]
+    x.add_rows(
+        [
+            [1, "Telegram Number Check"],
+            [2, "system upgrade"],
+            [3, "Install your package"],
+            [4, "Clone your repository"],
+            [5, "Create your package"],
+            [6, "Remove your packages"],
+            [7, "List Packages"],
+        ]
+    )
+    print(x)
+    print("Select your function:")
     g = int(input())
 
     if g == 1:
@@ -389,11 +391,15 @@ elif a == 11:
     os.system("python3 /data/data/com.termux/files/chroot/pacman.py")
 elif a == 12:
     os.system("clear")
-    print(colored("| ===  === === === |", 'grey', 'on_white'))
-    print(colored("| 1.Exit to chroot |", 'grey', 'on_white'))
-    print(colored("|------------------|", 'grey', 'on_white'))
-    print(colored("| 2.Exit to GRUB   |", 'grey', 'on_white'))
-    print(colored("| ===  === === === |", 'grey', 'on_white'))
+    x = PrettyTable()
+    x.field_names = ["N", "Select"]
+    x.add_rows(
+        [
+            [1, "Exit to chroot"],
+            [2, "Exit to GRUB"],
+        ]
+    )
+    print(x)
     q = int(input())
 
     if q == 1:
