@@ -27,6 +27,7 @@
 * 2.7.2
 * 2.8.0
 * 2.8.1
+* 2.9.0
 
 ## Versions
 
@@ -145,6 +146,12 @@
 ### 2.8.1
 * Added evil-ssdp
 * Remaked bootanimation
+
+### 2.9.0
+* Added WiFite
+* Added Kotlin
+* Added julia
+* Decolorized system
 
 ## Functions:
 
