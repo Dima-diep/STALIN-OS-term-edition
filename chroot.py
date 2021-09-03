@@ -2,7 +2,6 @@
 #! -*- coding: utf-8 -*-
 import os
 import time
-from termcolor import colored
 from prettytable import PrettyTable
 
 x = PrettyTable()
