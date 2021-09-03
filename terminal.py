@@ -1,51 +1,47 @@
 #!/usr/bin/env python3
 #! -*- coding: utf-8 -*-
 import os
-from termcolor import colored
+from prettytable import PrettyTable
 
 os.system("clear")
-print(colored("Terminal tools v2.1", 'yellow', 'on_grey'))
-print(colored("|##############|", 'green', 'on_grey'))
-print(colored("| 1.nmap       |", 'green', 'on_grey'))
-print(colored("|--------------|", 'green', 'on_grey'))
-print(colored("| 2.netcat     |", 'green', 'on_grey'))
-print(colored("|--------------|", 'green', 'on_grey'))
-print(colored("| 3.metasploit |", 'green', 'on_grey'))
-print(colored("|--------------|", 'green', 'on_grey'))
-print(colored("| 4.apache     |", 'green', 'on_grey'))
-print(colored("|--------------|", 'green', 'on_grey'))
-print(colored("| 5.geomac     |", 'green', 'on_grey'))
-print(colored("|--------------|", 'green', 'on_grey'))
-print(colored("| 6.bettercap  |", 'green', 'on_grey'))
-print(colored("|--------------|", 'green', 'on_grey'))
-print(colored("| 7.mitmproxy  |", 'green', 'on_grey'))
-print(colored("|--------------|", 'green', 'on_grey'))
-print(colored("| 8.evil-ssdp  |", 'green', 'on_grey'))
-print(colored("|--------------|", 'green', 'on_grey'))
-print(colored("| 9.WiFite     |", 'green', 'on_grey'))
-print(colored("|--------------|", 'green', 'on_grey'))
-print(colored("| 10.exit      |", 'green', 'on_grey'))
-print(colored("|##############|", 'green', 'on_grey'))
-print(colored("Select your tool:", 'red', 'on_grey'))
+print("Terminal tools v3.1")
+print("S - Root need only for some options")
+x = PrettyTable()
+x.field_names = ["N", "Tools", "Root"]
+x.add_rows(
+    [
+        [1, "nmap", "S"],
+        [2, "netcat", "S"],
+        [3, "metasploit", "N"],
+        [4, "apache", "N"],
+        [5, "geomac", "N"],
+        [6, "bettercap", "Y"],
+        [7, "mitmproxy", "N"],
+        [8, "evil-ssdp", " N"],
+        [9, "WiFite", "Y"],
+        [10, "exit", " "],
+    ]
+)
+print("Select your tool:")
 a = int(input())
 
 if a == 1:
     os.system("clear")
-    print(colored("Select options and port/domain: (ex. -Pn -A)", 'yellow', 'on_grey'))
-    print(colored("For some options, you need root!", 'red', 'on_grey'))
+    print("Select options and port/domain: (ex. -Pn -A)")
+    print("For some options, you need root!")
     b = input()
-    print(colored("Save results into txt? y/n", 'cyan', 'on_grey'))
+    print("Save results into txt? y/n")
     d = input()
 
     if d == 'y':
-        print(colored("Text result (full path)", 'magenta', 'on_grey'))
+        print("Text result (full path)")
         e = input()
         os.system("nmap " + b + " >> " + e)
         os.system("clear && python3 /data/data/com.termux/files/chroot/terminal.py")
     elif d == 'n':
         os.system("nmap " + b)
         for g in range(0, 9999999999):
-            print(colored("Press e for exit", 'yellow', 'on_grey'))
+            print("Press e for exit")
             f = input()
 
             if f == 'e':
@@ -55,21 +51,21 @@ if a == 1:
         os.system("clear && python3 /data/data/com.termux/files/chroot/terminal.py")
 elif a == 2:
     os.system("clear")
-    print(colored("Select options and port: (ex. -lp 23)", 'yellow', 'on_grey'))
-    print(colored("For the listening port 1-1023, you need root permission", 'red', 'on_grey'))
+    print("Select options and port: (ex. -lp 23)")
+    print("For the listening port 1-1023, you need root permission")
     h = input()
-    print(colored("For exiting, press Ctrl-C (not Ctrl-Z!)", 'green', 'on_grey'))
+    print("For exiting, press Ctrl-C (not Ctrl-Z!)")
     os.system("ncat " + h)
     os.system("clear && python3 /data/data/com.termux/files/chroot/terminal.py")
 elif a == 3:
     os.system("msfconsole")
     os.system("clear && python3 /data/data/com.termux/files/chroot/terminal.py")
 elif a == 4:
-    print(colored("Write option:", 'grey', 'on_white'))
+    print("Write option:")
     i = input()
     os.system("apachectl " + i)
     for j in range(0, 9999999999):
-        print(colored("Press e for exit", 'green', 'on_grey'))
+        print("Press e for exit")
         k = input()
 
         if k == 'e':
@@ -82,7 +78,7 @@ elif a == 5:
     l = input()
     os.system("geomac " + l)
     for m in range(0, 9999999999):
-        print(colored("Press e for exit", 'green', 'on_grey'))
+        print("Press e for exit")
         n = input()
 
         if n == 'e':
@@ -94,7 +90,7 @@ elif a == 6:
     os.system("sudo bettercap")
     os.system("python3 /data/data/com.termux/files/chroot/terminal.py")
 elif a == 7:
-    print(colored("Write your parameters (with \" \" in start) or run without it", 'yellow', 'on_grey'))
+    print("Write your parameters (with \" \" in start) or run without it")
     o = input()
     os.system("mitmproxy" + o)
     os.system("python3 /data/data/com.termux/files/chroot/terminal.py")
@@ -102,7 +98,7 @@ elif a == 8:
     os.system("python3 /data/data/com.termux/files/home/evil-ssdp/evil-ssdp.py")
     os.system("python3 /data/data/com.termux/files/chroot/terminal.py")
 elif a == 9:
-    print(colored("Write your parameters or run without it", "yellow", "on_grey"))
+    print("Write your parameters or run without it")
     p = input()
     os.system("sudo python3 /data/data/com.termux/files/home/Wifite/Wifite.py " + p)
     os.system("python3 /data/data/com.termux/files/chroot/terminal.py")
