@@ -22,6 +22,7 @@ x.add_rows(
         [10, "exit", " "],
     ]
 )
+print(x)
 print("Select your tool:")
 a = int(input())
 
@@ -103,4 +104,18 @@ elif a == 9:
     os.system("sudo python3 /data/data/com.termux/files/home/Wifite/Wifite.py " + p)
     os.system("python3 /data/data/com.termux/files/chroot/terminal.py")
 elif a == 10:
-    os.system("clear && python3 /data/data/com.termux/files/chroot/chroot.py")
+    x = PrettyTable()
+    x.field_names = ["N", "Option"]
+    x.add_rows(
+        [
+            [1, "Exit to chroot"],
+            [2, "Exit to GRUB"],
+        ]
+    )
+    print(x)
+    q = int(input())
+
+    if q == 1: 
+        os.system("clear && python3 /data/data/com.termux/files/chroot/chroot.py")
+    elif q == 2:
+        os.system("clear && python3 /data/data/com.termux/files/boot/grub.py")
