@@ -104,7 +104,7 @@ elif a == 8:
 elif a == 9:
     print(colored("Write your parameters or run without it", "yellow", "on_grey"))
     p = input()
-    os.system("python3 /data/data/com.termux/files/home/Wifite/Wifite.py " + p)
+    os.system("sudo python3 /data/data/com.termux/files/home/Wifite/Wifite.py " + p)
     os.system("python3 /data/data/com.termux/files/chroot/terminal.py")
 elif a == 10:
     os.system("clear && python3 /data/data/com.termux/files/chroot/chroot.py")
