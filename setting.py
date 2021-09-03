@@ -1,29 +1,34 @@
 #!/usr/bin/env python3
 #! -*- coding: utf-8 -*-
 import os
-from termcolor import colored
+from prettytable import PrettyTable
 import time
 
 os.system("clear")
-print(colored("| === === === === === === === ===  |", 'grey', 'on_white'))
-print(colored("| 1.Uninstall OS                   |", 'grey', 'on_white'))
-print(colored("| 2.Change login                   |", 'grey', 'on_white'))
-print(colored("| 3.Change password                |", 'grey', 'on_white'))
-print(colored("| 4.Initialize recovery            |", 'grey', 'on_white'))
-print(colored("| 5.Add your script into recovery  |", 'grey', 'on_white'))
-print(colored("| 6.Restart chroot menu with root  |", 'grey', 'on_white'))
-print(colored("| 7.Reinstall OS                   |", 'grey', 'on_white'))
-print(colored("| 8.Reinstall recovery             |", 'grey', 'on_white'))
-print(colored("| 9.Uninstall recovery             |", 'grey', 'on_white'))
-print(colored("| 10.Uninstall proot-distro system |", 'grey', 'on_white'))
-print(colored("| 11.Uninstall atilo system        |", 'grey', 'on_white'))
-print(colored("| 12.Exit to chroot menu           |", 'grey', 'on_white'))
-print(colored("| === === === === === === === ===  |", 'grey', 'on_white'))
-print(colored("Select your function:", 'grey', 'on_magenta'))
+x = PrettyTable()
+x.field_names = ["N", "Run"]
+x.add_rows(
+    [
+        [1, "Uninstall OS"],
+        [2, "Change login"],
+        [3, "Change password"],
+        [4, "Initialize recovery"],
+        [5, "Add your script into recovery"],
+        [6, "Restart chroot menu with root"],
+        [7, "Reinstall OS"],
+        [8, "Reinstall recovery"],
+        [9, "Uninstall recovery"],
+        [10, "Uninstall proot-distro system"],
+        [11, "Uninstall atilo system"],
+        [12, "Exit to chroot menu"],
+    ]
+)
+print(x)
+print("Select your function:")
 a = int(input())
 
 if a == 1:
-    print(colored("Are you seriously want uninstall OS? yes/no", 'yellow', 'on_grey'))
+    print("Are you seriously want uninstall OS? yes/no")
     b = input()
 
     if b == 'yes':
@@ -48,7 +53,7 @@ elif a == 6:
     os.system("clear && sudo python3 /data/data/com.termux/files/chroot/chroot.py")
     os.system("clear && python3 /data/data/com.termux/files/chroot/chroot.py")
 elif a == 7:
-    print(colored("Are you seriously want to reinstall OS? yes/no", 'yellow', 'on_grey'))
+    print("Are you seriously want to reinstall OS? yes/no")
     c = input()
 
     if c == 'yes':
@@ -61,18 +66,18 @@ elif a == 8:
     os.system("clear && python3 /data/data/com.termux/files/chroot/chroot.py")
 elif a == 9:
     os.system("rm -rf /data/data/com.termux/files/.recovery")
-    print(colored("Recovery has been uninstalled", 'yellow', 'on_grey'))
+    print("Recovery has been uninstalled")
     time.sleep(5)
     os.system("clear && python3 /data/data/com.termux/files/chroot/chroot.py")
 elif a == 10:
     os.system("clear")
-    print(colored("System for uninstall", 'magenta', 'on_grey'))
+    print("System for uninstall")
     d = input()
     os.system("proot-distro remove " + d)
     os.system("python3 /data/data/com.termux/files/chroot/chroot.py")
 elif a == 11:
     os.system("clear")
-    print(colored("System for uninstall", 'magenta', 'on_grey'))
+    print("System for uninstall")
     e = input()
     os.system("python3 /data/data/com.termux/files/usr/bin/atilo remove " + e)
     os.system("python3 /data/data/com.termux/files/chroot/chroot.py") 
