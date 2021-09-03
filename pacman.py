@@ -179,7 +179,7 @@ elif a == 2:
     elif c == 11:
         os.system("clear && git clone https://github.com/initstring/evil-ssdp")
     elif c == 12:
-        os.system("clear && git clone https://github.com/derv82/wifite.git")
+        os.system("clear && git clone https://github.com/derv82/wifite.git && apt install root-repo -y && apt install aircrack-ng -y")
     os.system("clear && python3 /data/data/com.termux/files/chroot/pacman.py")
 elif a == 3:
     os.system("clear")
