@@ -3,20 +3,26 @@
 import os
 import time
 from termcolor import colored
+from prettytable import PrettyTable
 
 os.system("bash /data/data/com.termux/files/system/.killhist.sh")
 os.system("clear")
 print("---------------------------------")
 os.system("uname -a")
 print(" ")
-print("Termux GRUB v2.1 by Dima-diep")
+print("Termux GRUB v3.1 by Dima-diep")
 print("STALIN-OS term-edition v2.8.1 by Dima-diep")
-print("|=== === === === === === === ===|")
-print("| 1.STALIN OS                   |")
-print("| 2.proot-system login          |")
-print("| 3.proot-system installer      |")
-print("| 4.OS-Recovery Mode            |")
-print("|=== === === === === === === ===|")
+x = PrettyTable()
+x.field_names = ["N", "Option"]
+x.add_rows(
+    [
+        [1, "STALIN OS"],
+        [2, "proot-system login"],
+        [3, "proot-system installer"],
+        [4, "OS-Recovery Mode"],
+    ]
+)
+print(x)
 print("For exit, press Ctrl-C or Ctrl-Z")
 os.system("python3 /data/data/com.termux/files/boot/login.py")
 print("Select your system: ")
@@ -29,11 +35,16 @@ if a == 1:
 elif a == 2:
     os.system("clear")
     time.sleep(2.5)
-    print("(===    ===   ===)")
-    print("( 1.atilo        )")
-    print("( 2.proot-distro )")
-    print("( 3.Andronix OS  )")
-    print("(===   ===    ===)")
+    x = PrettyTable()
+    x.field_names = ["N", "Type of system"]
+    x.add_rows(
+        [
+            [1, "atilo"],
+            [2, "proot-distro"],
+            [3, "Andronix OS"],
+        ]
+    )
+    print(x)
     print("Your proot type: ")
     b = int(input())
 
@@ -60,16 +71,17 @@ elif a == 2:
         os.system("python3 /data/data/com.termux/files/boot/grub.py")
 elif a == 3:
     os.system("clear")
-    print(colored("|=== === === === === === === ===", 'grey', 'on_blue'))
-    print(colored("| Types of installation:       |", 'grey', 'on_blue'))
-    print(colored("|=== === === === === === === ===", 'grey', 'on_blue'))
-    print(colored("| 1.atilo                      |", 'grey', 'on_blue'))
-    print(colored("|------------------------------|", 'grey', 'on_blue'))
-    print(colored("| 2.proot-distro Termux-repo   |", 'grey', 'on_blue'))
-    print(colored("|------------------------------|", 'grey', 'on_blue'))
-    print(colored("| 3.Andronix OS                |", 'grey', 'on_blue'))
-    print(colored("|------------------------------|", 'grey', 'on_blue'))
-    print(colored("Select your type: ", 'grey', 'on_white'))
+    x = PrettyTable()
+    x.field_names = ["N", "Type of installation"]
+    x.add_rows(
+        [
+            [1, "atilo"],
+            [2, "proot-distro Termux-repo"],
+            [3, "Andronix OS"],
+        ]
+    )
+    print(x)
+    print("Select your type: ")
     f = int(input())
 
     if f == 1:
@@ -94,10 +106,10 @@ elif a == 3:
         os.system("cd /data/data/com.termux/files/home/Linux-Installer-Termux && chmod 777 *.py && chmod +x install-requirements.sh")
         os.system("bash install-requirements.sh")
         os.system("clear")
-        print(colored("The first installer can install Debian, Kali Linux, Ubuntu, Arch Linux, Manjaro, Fedora, Void, Alpine, BackBox, CentOS, openSUSE", 'grey', 'on_blue'))
-        print(colored("---------------------------------------------", 'grey', 'on_blue'))
-        print(colored("The second installer can install Debian, Kali Linux, Ubuntu, Manjaro, Parrot, Arch, Alpine, Fedora, Void", 'grey', 'on_blue'))
-        print(colored("Select your system (1/2):", 'grey', 'on_white'))
+        print("The first installer can install Debian, Kali Linux, Ubuntu, Arch Linux, Manjaro, Fedora, Void, Alpine, BackBox, CentOS, openSUSE")
+        print("---------------------------------------------")
+        print("The second installer can install Debian, Kali Linux, Ubuntu, Manjaro, Parrot, Arch, Alpine, Fedora, Void")
+        print("Select your system (1/2):")
         k = int(input())
 
         if k == 1:
@@ -108,11 +120,11 @@ elif a == 3:
             os.system("python3 /data/data/com.termux/files/boot/grub.py")
 elif a == 4:
     os.system("clear")
-    print(colored("WARNING! FOR ANY USAGE OF THIS MODE, YOU NEED INITIALIZE IT", 'yellow', 'on_grey'))
+    print("WARNING! FOR ANY USAGE OF THIS MODE, YOU NEED INITIALIZE IT")
     time.sleep(1)
     if os.path.exists("/data/data/com.termux/files/.recovery"):
         os.system("python3 /data/data/com.termux/files/system/recovery.py")
     else:
-        print(colored("WARNING! THE RECOVERY MODE ISN'T INITIALIZED", 'yellow', 'on_grey'))
+        print("WARNING! THE RECOVERY MODE ISN'T INITIALIZED")
         time.sleep(2.5)
         os.system("clear && python3 /data/data/com.termux/files/boot/grub.py")
