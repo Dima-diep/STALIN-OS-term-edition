@@ -3,47 +3,35 @@
 import os
 import time
 from termcolor import colored
+from prettytable import PrettyTable
 
-print("============================")
-print(colored("Contacts", 'red', 'on_grey'))
-print("----------------------------")
-print(colored("Music", 'red', 'on_grey'))
-print("----------------------------")
-print(colored("Package Manager", 'cyan', 'on_grey'))
-print("----------------------------")
-print(colored("Games", 'red', 'on_grey'))
-print("----------------------------")
-print(colored("Taskmgr Linux (Taskmgr)", 'red', 'on_grey'))
-print("----------------------------")
-print(colored("Telegram [supported for arm64]", 'red', 'on_grey'))
-print("----------------------------")
-print(colored("File Manager", 'cyan', 'on_grey'))
-print("----------------------------")
-print(colored("Terminal tools", 'green', 'on_grey'))
-print("----------------------------")
-print(colored("System menu", 'magenta' ,'on_grey'))
-print("----------------------------")
-print(colored("Help for STALIN-OS", 'magenta', 'on_grey'))
-print("----------------------------")
-print(colored("Plugin Vim Install (PVI)", 'green', 'on_grey'))
-print("----------------------------")
-print(colored("Tor", 'magenta', 'on_grey'))
-print("----------------------------")
-print(colored("For developers", 'yellow', 'on_grey'))
-print("----------------------------")
-print(colored("Open file in android app (Open)", 'red', 'on_grey'))
-print("----------------------------")
-print(colored("Calculator", 'green', 'on_grey'))
-print("----------------------------")
-print(colored("Test network speed (TNS)", 'yellow', 'on_grey'))
-print("----------------------------")
-print(colored("Open file into text editor (OFTE)", 'red', 'on_grey'))
-print("----------------------------")
-print(colored("Run SSH", 'cyan', 'on_grey'))
-print("----------------------------")
-print(colored("Exit to GRUB (GRUB)", 'cyan', 'on_grey'))
-print("============================")
-print(colored("Run app:", 'grey', 'on_blue'))
+x = PrettyTable()
+x.field_names = ["Chroot Menu"]
+x.add_rows(
+    [
+        ["Contacts"],
+        ["Music"],
+        ["Package Manager"],
+        ["Games"],
+        ["Taskmgr Linux (Taskmgr)"],
+        ["Telegram (supported for arm64)"],
+        ["File Manager"],
+        ["Terminal tools"],
+        ["System menu"],
+        ["Help for STALIN-OS"],
+        ["Plugin Vim Install (PVI)"],
+        ["Tor"],
+        ["For developers"],
+        ["Open file in android app (Open)"],
+        ["Calculator"],
+        ["Test Network Speed (TNS)"],
+        ["Open fule into text editor (OFTE)"],
+        ["Run SSH"],
+        ["Exit to GRUB"],
+    ]
+)
+print(x)
+print("Run app:")
 a = input()
 
 if a == 'Contacts':
@@ -98,163 +86,182 @@ elif a == 'Telegram':
         os.system("clear && python3 /data/data/com.termux/files/chroot/chroot.py")
 elif a == 'File Manager':
     os.system("clear")
-    print(colored("What do you want to do?", 'cyan', 'on_grey'))
-    print(colored("1.Check files", 'cyan', 'on_grey'))
-    print(colored("2.Check all info for files", 'cyan', 'on_grey'))
-    print(colored("3.Check attributes of files", 'cyan', 'on_grey'))
-    print(colored("4.Find file in directory", 'cyan', 'on_grey'))
-    print(colored("5.Execute file", 'cyan', 'on_grey'))
-    print(colored("6.Make directory", 'cyan', 'on_grey'))
-    print(colored("7.Make file", 'cyan', 'on_grey'))
-    print(colored("8.Remove file/directory", 'cyan', 'on_grey'))
-    print(colored("9.Totally remove file/directory", 'cyan', 'on_grey'))
-    print(colored("10.Move/Rename file/directory", 'cyan', 'on_grey'))
-    print(colored("11.Copy file", 'cyan', 'on_grey'))
-    print(colored("12.Copy directory", 'cyan', 'on_grey'))
-    print(colored("13.Run file checker", 'cyan', 'on_grey'))
-    print(colored("14.chmod/chattr", 'cyan', 'on_grey'))
-    print(colored("15.Exit to chroot", 'cyan', 'on_grey'))
-    print(colored("====================", 'cyan', 'on_grey'))
-    print(colored("Select your function", 'green', 'on_grey'))
+    x = PrettyTable()
+    x.field_names = ["N", "File Manager"]
+    x.add_rows(
+        [
+            [1, "Check files"],
+            [2, "Check all info for files"],
+            [3, "Check attributes of files"],
+            [4, "Find file in directory"],
+            [5, "Execute file"],
+            [6, "Make directory"],
+            [7, "Make file"],
+            [8, "Remove file/directory"],
+            [9, "Totally remove file/directory"],
+            [10, "Move/rename file/directory"],
+            [11, "Copy file"],
+            [12, "Copy directory"],
+            [13, "Run file checker"],
+            [14, "chmod/chattr"],
+            [15, "Exit to chroot"],
+        ]
+    )
+    print(x)
+    print("Select your function")
     m = int(input())
     
     if m == 1:
-        print(colored("Directory:", 'cyan', 'on_grey'))
+        print("Directory:")
         ae = input()
         os.system("ls -a " + ae)
     elif m == 2:
-        print(colored("Directory:", 'cyan', 'on_grey'))
+        print("Directory:")
         af = input()
         os.system("ls -al " + af)
     elif m == 3:
-        print(colored("Directory:", 'cyan', 'on_grey'))
+        print("Directory:")
         ag = input()
         os.system("lsattr " + ag)
     elif m == 4:
-        print(colored("File name for find:", 'green', 'on_grey'))
+        print("File name for find:")
         n = input()
-        print(colored("Directory where find:", 'green', 'on_grey'))
+        print("Directory where find:")
         o = input()
         os.system("ls -a " + o + " | grep " + n)
     elif m == 5:
         os.system("clear")
-        print(colored("1.Run bash script", 'red', 'on_grey'))
-        print(colored("2.Run python2 script", 'red', 'on_grey'))
-        print(colored("3.Run python3 script", 'red', 'on_grey'))
-        print(colored("4.Run ruby script", 'red', 'on_grey'))
-        print(colored("5.Run makefile", 'yellow', 'on_grey'))
-        print(colored("6.Run compiled C/C++/Rust script", 'red', 'on_grey'))
-        print(colored("7.Run go-lang script", 'red', 'on_grey'))
-        print(colored("8.Compile java program", 'yellow', 'on_grey'))
-        print(colored("9.Run java program", 'red', 'on_grey'))
-        print(colored("10.Run php program", 'red', 'on_grey'))
-        print(colored("11.Run swift program", 'red', 'on_grey'))
-        print(colored("12.Compile rust program", 'yellow', 'on_grey'))
+        x = PrettyTable()
+        x.field_names = ["N", "Option"]
+        x.add_rows(
+            [
+                [1, "Run bash script"],
+                [2, "Run python2 script"],
+                [3, "Run python3 script"],
+                [4, "Run ruby script"],
+                [5, "Run makefile"],
+                [6, "Run compiled C/C++/Rust script"],
+                [7, "Run go-lang script"],
+                [8, "Compile java program"],
+                [9, "Run java program"],
+                [10, "Run php program"],
+                [11, "Run swift program"],
+                [12, "Compile rust program"],
+            ]
+        )
+        print(x)
         n = int(input())
         
         if n == 1:
-            print(colored("Write path to script and parameters", 'green', 'on_grey'))
+            print("Write path to script and parameters")
             o = input()
             os.system("bash " + o)
         elif n == 2:
-            print(colored("Write path to script and parameters", 'green', 'on_grey'))
+            print("Write path to script and parameters")
             p = input()
             os.system("python2 " + p)
         elif n == 3:
-            print(colored("Write path to script and parameters", 'green', 'on_grey'))
+            print("Write path to script and parameters")
             q = input
             os.system("python3 " + q)
         elif n == 4:
-            print(colored("Write path to script and parameters", 'green', 'on_grey'))
+            print("Write path to script and parameters")
             r = input()
             os.system("ruby " + r)
         elif n == 5:
-            print(colored("Print directory with script", 'cyan', 'on_grey'))
+            print("Write directory with script")
             s = input()
             os.system("cd " + s)
-            print(colored("Print parameters or scriptname (if test.cpp, then write \"test\")", 'green', 'on_grey'))
+            print("Write parameters or scriptname (if test.cpp, then write \"test\")")
             t = input()
             os.system("make " + t)
         elif n == 6:
-            print(colored("Write script directory", 'green', 'on_grey'))
+            print("Write script directory")
             u = input()
             os.system("cd " + u)
-            print(colored("Write script name", 'green', 'on_grey'))
+            print("Write script name")
             v = input()
             os.system("./" + v)
         elif n == 7:
-            print(colored("Write script (full path)", 'green', 'on_grey'))
+            print("Write script (full path)")
             w = input()
             os.system("go run " + w)
         elif n == 8:
-            print(colored("Write script directory", 'green', 'on_grey'))
+            print("Write script directory")
             x = input()
             os.system("cd " + x)
-            print(colored("Write script name (if namescript is test.java, write \"test\"", 'green', 'on_grey'))
+            print("Write script name (if namescript is test.java, write \"test\"")
             y = input()
             os.system("javac " + y)
         elif n == 9:
-            print(colored("Full path to script", 'green', 'on_grey'))
+            print("Full path to script")
             z = input()
             os.system("java " + z)
         elif n == 10:
-            print(colored("Full path to script", 'green', 'on_grey'))
+            print("Full path to script")
             aa = input()
             os.system("php " + aa)
         elif n == 11:
-            print(colored("Full path to script", 'green', 'on_grey'))
+            print("Full path to script")
             ab = input()
             os.system("swift " + ab)
         elif n == 12:
-            print(colored("Print working directory", 'green', 'on_grey'))
+            print("Write working directory")
             ac = input()
             os.system("cd " + ac)
-            print(colored("Script name (if the filename is test.rust, write \"test\"", 'green', 'on_grey'))
+            print("Script name:")
             ad = input()
             os.system("rustc " + ad)
         time.sleep(5)
         os.system("clear && python3 /data/data/com.termux/files/chroot/chroot.py")
     elif m == 6:
-        print(colored("Write full path to new directory", 'green', 'on_grey'))
+        print("Write full path to new directory")
         ak = input()
         os.system("mkdir " + ak)
     elif m == 7:
-        print(colored("Write full path to new file", 'green', 'on_grey'))
+        print("Write full path to new file")
         al = input()
         os.system("touch " + al)
     elif m == 8:
-        print(colored("Write full path to file/directory", 'green', 'on_grey'))
+        print("Write full path to file/directory")
         am = input()
         os.system("rm -rf " + am)
     elif m == 9:
-        print(colored("Write full path to file/directory", 'green', 'on_grey'))
+        print("Write full path to file/directory")
         an = input()
         os.system("shred -n 10 " + an)
     elif m == 10:
-        print(colored("Write full old path to file/directory", 'green', 'on_grey'))
+        print("Write full old path to file/directory")
         ao = input()
-        print(colored("Full path with new name/New directory to move", 'green', 'on_grey'))
+        print("Full path with new name/New directory to move")
         ap = input()
         os.system("mv " + ao + " " + ap)
     elif m == 11:
-        print(colored("Write full path to file", 'green', 'on_grey'))
+        print("Write full path to file")
         aq = input()
-        print(colored("Full path to new directory", 'green', 'on_grey'))
+        print("Full path to new directory")
         ar = input()
         os.system("cp " + aq + " " + ar)
     elif m == 12:
-        print(colored("Write full path to directory ", 'green', 'on_grey'))
+        print("Write full path to directory")
         au = input()
-        print(colored("Full path to new directory", 'green', 'on_grey'))
+        print("Full path to new directory")
         at = input()
         os.system("cp -r " + au + " " + at)
     elif m == 13:
         os.system("mc")
     elif m == 14:
-        print(colored("1.chmod", 'green', 'on_grey'))
-        print(colored("2.chattr", 'green', 'on_grey'))
+        x = PrettyTable()
+        x.field_names = ["N", "Option"]
+        x.add_rows(
+           [
+               [1, "chmod"],
+               [2, "chattr"],
+           ]
+        )
+        print(x)
         aw = int(input())
-        print(colored("Write options and file", 'green', 'on_grey'))
+        print("Write options and file")
         ax = input()
         
         if aw == 1:
@@ -301,30 +308,26 @@ elif a == 'TNS':
     os.system("clear && python3 /data/data/com.termux/files/chroot/chroot.py")
 elif a == 'OFTE':
     os.system("clear")
-    print(colored("| === === === === |", 'yellow', 'on_grey'))
-    print(colored("| 1.nano          |", 'yellow', 'on_grey'))
-    print(colored("|-----------------|", 'yellow', 'on_grey'))
-    print(colored("| 2.vim           |", 'yellow', 'on_grey'))
-    print(colored("|-----------------|", 'yellow', 'on_grey'))
-    print(colored("| 3.micro         |", 'yellow', 'on_grey'))
-    print(colored("|-----------------|", 'yellow', 'on_grey'))
-    print(colored("| 4.neovim        |", 'yellow', 'on_grey'))
-    print(colored("|-----------------|", 'yellow', 'on_grey'))
-    print(colored("| 5.joe           |", 'yellow', 'on_grey'))
-    print(colored("|-----------------|", 'yellow', 'on_grey'))
-    print(colored("| 6.emacs         |", 'yellow', 'on_grey'))
-    print(colored("|-----------------|", 'yellow', 'on_grey'))
-    print(colored("| 7.mcedit        |", 'yellow', 'on_grey'))
-    print(colored("|-----------------|", 'yellow', 'on_grey'))
-    print(colored("| 8.System editor |", 'yellow', 'on_grey'))
-    print(colored("|-----------------|", 'yellow', 'on_grey'))
-    print(colored("| 9.vi            |", 'yellow', 'on_grey'))
-    print(colored("|-----------------|", 'yellow', 'on_grey'))
-    print(colored("| 10.exit         |", 'yellow', 'on_grey'))
-    print(colored("| === === === === |", 'yellow', 'on_grey'))
-    print(colored("Select your editor:", 'green', 'on_grey'))
+    x = PrettyTable()
+    x.field_names = ["N", "Editor"]
+    x.add_rows(
+        [
+            [1, "nano"],
+            [2, "vim"],
+            [3, "micro"],
+            [4, "neovim"],
+            [5, "joe"],
+            [6, "emacs"],
+            [7, "mcedit"],
+            [8, "System editor"],
+            [9, "vi"],
+            [10, "exit"],
+        ]
+    )
+    print(x)
+    print("Select your editor:")
     k = int(input())
-    print(colored("Full path to file:", 'green', 'on_grey'))
+    print("Full path to file:")
     l = input()
 
     if k == 1:
