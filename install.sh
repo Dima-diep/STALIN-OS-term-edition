@@ -28,7 +28,7 @@ python3 -m pip install --upgrade pip >/dev/null
 ECHO
 echo "(##-----------------------)"
 echo "10%"
-python3 -m pip install termcolor requests tqdm PTable urllib3 charset-normalizer certifi idna colorama prettytable wcwidth >/dev/null
+python3 -m pip install requests tqdm PTable urllib3 charset-normalizer certifi idna prettytable wcwidth >/dev/null
 ECHO
 echo "(###----------------------)"
 echo "12%"
