@@ -3,7 +3,6 @@
 import os
 import time
 from prettytable import PrettyTable
-from termcolor import colored
 
 os.system("clear")
 print("Hello! This is STALIN OS term-edition Package Manager!")
@@ -210,7 +209,7 @@ elif a == 3:
     elif d == 2:
         os.system("clear && apt install python2 -y")
     elif d == 3:
-        os.system("clear && apt install rust -y")
+        os.system("clear && apt install rust rustc-dev rustanalyzer rustscan -y")
     elif d == 4:
         os.system("clear && apt install swift -y")
     elif d == 5:
