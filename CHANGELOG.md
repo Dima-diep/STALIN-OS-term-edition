@@ -153,6 +153,10 @@
 * Added julia
 * Decolorized system
 
+### 2.9.1
+* Added make
+* Added rust
+
 ## Functions:
 
 ### Example:
