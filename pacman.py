@@ -6,7 +6,7 @@ from prettytable import PrettyTable
 
 os.system("clear")
 print("Hello! This is STALIN OS term-edition Package Manager!")
-print("version 4.3 by Dima-diep")
+print("version 4.4 by Dima-diep")
 print("WARNING! Package Manager isn't working with root")
 x = PrettyTable()
 x.field_names = ["N", "Name"]
@@ -198,6 +198,7 @@ elif a == 3:
             [10, "javascript-lts"],
             [11, "kotlin"],
             [12, "julia"],
+            [13, "make"],
         ]
     )
     print(x)
@@ -228,6 +229,8 @@ elif a == 3:
         os.system("clear && apt install kotlin -y")
     elif d == 12:
         os.system("clear && apt install julia -y")
+    elif d == 13:
+        os.system("clear && apt install make cmake -y")
     os.system("python3 /data/data/com.termux/files/chroot/pacman.py")
 elif a == 4:
     os.system("clear")
