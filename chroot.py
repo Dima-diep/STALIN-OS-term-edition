@@ -146,6 +146,7 @@ elif a == 'File Manager':
                 [10, "Run php program"],
                 [11, "Run swift program"],
                 [12, "Compile rust program"],
+                [13, "Run android-shell script"],
             ]
         )
         print(x)
@@ -211,6 +212,10 @@ elif a == 'File Manager':
             print("Script name:")
             ad = input()
             os.system("rustc " + ad)
+        elif n == 13:
+            print("Write full path to script")
+            ae = input()
+            os.system("/system/bin/sh " + ae)
         time.sleep(5)
         os.system("clear && python3 /data/data/com.termux/files/chroot/chroot.py")
     elif m == 6:
