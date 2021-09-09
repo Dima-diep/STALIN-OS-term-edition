@@ -28,6 +28,8 @@
 * 2.8.0
 * 2.8.1
 * 2.9.0
+* 2.9.1
+* 2.9.2
 
 ## Versions
 
@@ -156,6 +158,9 @@
 ### 2.9.1
 * Added make
 * Added rust
+
+### 2.9.2
+* Added android-shell
 
 ## Functions:
 
