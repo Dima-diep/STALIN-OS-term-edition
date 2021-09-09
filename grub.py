@@ -11,7 +11,7 @@ print("---------------------------------")
 os.system("uname -a")
 print(" ")
 print("Termux GRUB v3.1 by Dima-diep")
-print("STALIN-OS term-edition v2.9.1 by Dima-diep")
+print("STALIN-OS term-edition v2.9.2 by Dima-diep")
 x = PrettyTable()
 x.field_names = ["N", "Option"]
 x.add_rows(
