@@ -147,6 +147,7 @@ elif a == 'File Manager':
                 [11, "Run swift program"],
                 [12, "Compile rust program"],
                 [13, "Run android-shell script"],
+                [14, "cmake"],
             ]
         )
         print(x)
@@ -216,6 +217,10 @@ elif a == 'File Manager':
             print("Write full path to script")
             ae = input()
             os.system("/system/bin/sh " + ae)
+        elif n == 14:
+            print("Write directory of project")
+            af = input()
+            os.system("cd " + af + " && cmake CMakeLists.txt && make")
         time.sleep(5)
         os.system("clear && python3 /data/data/com.termux/files/chroot/chroot.py")
     elif m == 6:
