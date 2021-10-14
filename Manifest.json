@@ -8,6 +8,5 @@
     "depends": ["dependency"],
     "files" :{
         "myfile.py": "bin/myfile",
-        "mylib.so": "lib/mylib.so"
-    }
+        "mylib.so": "lib/mylib.so"}
 }
